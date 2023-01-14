@@ -4,6 +4,9 @@ use std::io;
 
 fn main() {
     println!("Guess the number!");
+    // array with explicit type annotation
+    let arr: [i32; 3] = [1,2,3];
+    
     loop {
         println!("Please input your guess.");
         let secret_number = thread_rng().gen_range(1..100);
@@ -25,4 +28,14 @@ fn main() {
             Ordering::Greater => println!("Too big!"),
         }
     }
+}
+
+fn function_returns_expression (a:i32, b:i32) -> i32 {
+    //  block of the code with the conditions called "arms"
+    if true {
+        a + b
+    } else {
+        0
+    }
+
 }
